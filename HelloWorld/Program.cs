@@ -70,6 +70,29 @@ namespace Helloword
                     double r = double.Parse(Console.ReadLine());
                     Console.WriteLine(Math.Round(2 * Math.PI * r, 2));
                     break;
+
+                     case 5:
+                    Console.Write("Ingrese un número (1-7): ");
+                    int dia = int.Parse(Console.ReadLine());
+                    switch (dia)
+                    {
+                        case 1: Console.WriteLine("Lunes"); break;
+                        case 2: Console.WriteLine("Martes"); break;
+                        case 3: Console.WriteLine("Miércoles"); break;
+                        case 4: Console.WriteLine("Jueves"); break;
+                        case 5: Console.WriteLine("Viernes"); break;
+                        default: Console.WriteLine("Número fuera del rango laboral."); break;
+                    }
+                    break;
+
+                case 6:
+                    Console.Write("Ingrese salario anual: ");
+                    double salario = double.Parse(Console.ReadLine());
+                    if (salario > 12000)
+                        Console.WriteLine((salario - 12000) * 0.15);
+                    else
+                        Console.WriteLine("No debe impuestos.");
+                    break;
 }
     }
 }
