@@ -152,8 +152,51 @@ namespace Helloword
                     }
                     Console.WriteLine(menor);
                     break;
-}
+
+                     case 13:
+                    Console.Write("Ingrese una palabra: ");
+                    string text = Console.ReadLine().ToLower();
+                    int contador = 0;
+
+                    foreach (char c in text)
+                    {
+                        if ("aeiou".Contains(c))
+                            contador++;
+                    }
+                    Console.WriteLine(contador);
+                    break;
+
+                case 14:
+                    Console.Write("Ingrese un número: ");
+                    int fact = int.Parse(Console.ReadLine());
+                    int resultado = 1;
+
+                    for (int i = 1; i <= fact; i++)
+                        resultado *= i;
+
+                    Console.WriteLine(resultado);
+                    break;
+
+                case 15:
+                    Console.Write("Ingrese un número: ");
+                    int rango = int.Parse(Console.ReadLine());
+                    if (rango >= 10 && rango <= 20)
+                        Console.WriteLine("Está en el rango.");
+                    else
+                        Console.WriteLine("Fuera del rango.");
+                    break;
+
+                case 0:
+                    Console.WriteLine("Saliendo...");
+                    break;
+
+                default:
+                    Console.WriteLine("Opción inválida.");
+                    break;
+            }
+
+        } while (opcion != 0);
     }
 }
-
 }
+    
