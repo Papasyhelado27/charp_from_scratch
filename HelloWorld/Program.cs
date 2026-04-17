@@ -93,6 +93,37 @@ namespace Helloword
                     else
                         Console.WriteLine("No debe impuestos.");
                     break;
+
+                    case 7:
+                    Console.Write("Ingrese el primer número: ");
+                    int n1 = int.Parse(Console.ReadLine());
+                    Console.Write("Ingrese el segundo número: ");
+                    int n2 = int.Parse(Console.ReadLine());
+                    Console.WriteLine(n1 % n2);
+                    break;
+
+                case 8:
+                    int suma = 0;
+                    for (int i = 2; i <= 50; i += 2)
+                        suma += i;
+                    Console.WriteLine(suma);
+                    break;
+
+                case 9:
+                    Console.Write("Numerador 1: ");
+                    int fn1 = int.Parse(Console.ReadLine());
+                    Console.Write("Denominador 1: ");
+                    int fd1 = int.Parse(Console.ReadLine());
+                    Console.Write("Numerador 2: ");
+                    int fn2 = int.Parse(Console.ReadLine());
+                    Console.Write("Denominador 2: ");
+                    int fd2 = int.Parse(Console.ReadLine());
+
+                    int numRes = (fn1 * fd2) - (fn2 * fd1);
+                    int denRes = fd1 * fd2;
+
+                    Console.WriteLine($"{numRes}/{denRes}");
+                    break;
 }
     }
 }
