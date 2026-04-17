@@ -56,7 +56,20 @@ namespace Helloword
                     else
                         Console.WriteLine(b * 3);
                     break;
+ case 3:
+                    Console.Write("Ingrese un número: ");
+                    double num3 = double.Parse(Console.ReadLine());
+                    if (num3 >= 0)
+                        Console.WriteLine(Math.Sqrt(num3));
+                    else
+                        Console.WriteLine(num3 * num3);
+                    break;
 
+                case 4:
+                    Console.Write("Ingrese el radio: ");
+                    double r = double.Parse(Console.ReadLine());
+                    Console.WriteLine(Math.Round(2 * Math.PI * r, 2));
+                    break;
 }
     }
 }
