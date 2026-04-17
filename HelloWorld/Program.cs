@@ -124,6 +124,34 @@ namespace Helloword
 
                     Console.WriteLine($"{numRes}/{denRes}");
                     break;
+
+                    case 10:
+                    Console.Write("Ingrese una palabra: ");
+                    string palabra = Console.ReadLine();
+                    Console.WriteLine(palabra.Length);
+                    break;
+
+                case 11:
+                    double sumaProm = 0;
+                    for (int i = 1; i <= 4; i++)
+                    {
+                        Console.Write($"Número {i}: ");
+                        sumaProm += double.Parse(Console.ReadLine());
+                    }
+                    Console.WriteLine(sumaProm / 4);
+                    break;
+
+                case 12:
+                    int menor = int.MaxValue;
+                    for (int i = 1; i <= 5; i++)
+                    {
+                        Console.Write($"Número {i}: ");
+                        int num = int.Parse(Console.ReadLine());
+                        if (num < menor)
+                            menor = num;
+                    }
+                    Console.WriteLine(menor);
+                    break;
 }
     }
 }
